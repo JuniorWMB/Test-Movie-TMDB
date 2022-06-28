@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import tmdb from "../../public/tmdb.png";
 import FallBackImage from "../FallBack/FallBackImage";
 
 const ImageText = ({ image, title, year }) => {
