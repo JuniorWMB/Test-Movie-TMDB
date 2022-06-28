@@ -1,14 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [MovieFinder](https://moviefindertestjunior.netlify.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## How to launch th project and test it
+First, clone project:
+```bash
+git clone <<URL of project>>
+```
 
-First, run the development server:
+Second, run the development server:
 
 ```bash
 npm run dev
 # or
 yarn dev
 ```
+You can Test the code with jest :
+
+```bash
+npm run test
+# or
+yarn test
+
+```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
