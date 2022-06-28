@@ -28,8 +28,8 @@ export default function Home({ movieTopTen, movieGenre }) {
   return (
     <div>
       <Head>
-        <title>Movie TMDB Test Junior</title>
-        <meta name="description" content=" Movie TMDB Test Junior" />
+        <title>Movie TMDB Junior</title>
+        <meta name="description" content="Test Movie TMDB" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
@@ -58,20 +58,12 @@ export default function Home({ movieTopTen, movieGenre }) {
 }
 
 export const getServerSideProps = async ({ query }) => {
-  // Fetch the first page as default
-  const page = query.page || 1;
-  let movieData = null;
   let movieTopTen = null;
   let movieGenre = null;
 
-  // Fetch data from external API
   try {
-    //Fetch All movie
-    const res = await fetch(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=fr-FR&page=${page}`
-    );
+    // Fetch data from external API
 
-    //Fetch top Movie
     const resTop = await fetch(
       `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}&language=fr-FR`
     );
@@ -79,19 +71,18 @@ export const getServerSideProps = async ({ query }) => {
       `https://api.themoviedb.org/3/genre/movie/list?api_key=${process.env.API_KEY}&language=fr-FR`
     );
 
-    if (res.status !== 200) {
+    // Catch error in status
+    if (resTop.status !== 200 || responeGenre.status !== 200) {
       throw new Error("Failed to fetch");
     }
-
-    movieData = await res.json();
     movieTopTen = await resTop.json();
     movieGenre = await responeGenre.json();
-  } catch (err) {
-    movieData = { error: { message: err.message } };
-    movieTopTen = { error: { message: err.message } };
-    movieGenre = { error: { message: err.message } };
+  } catch (error) {
+    movieTopTen = { error: { message: error.message } };
+    movieGenre = { error: { message: error.message } };
   }
 
   // Pass data to the page via props
-  return { props: { movieData, movieTopTen, movieGenre } };
+
+  return { props: { movieTopTen, movieGenre } };
 };

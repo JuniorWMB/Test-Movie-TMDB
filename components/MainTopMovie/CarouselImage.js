@@ -1,13 +1,9 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import SliderLeftArrow from "../Arrows/SliderLeftArrow";
 import SliderRightArrow from "../Arrows/SliderRightArrow";
 import Carousel from "../Carousel/Carousel";
 
 const CarouselImage = ({ movieTopTen }) => {
-  useEffect(() => {
-    movieTopTen;
-  }, [movieTopTen]);
-
   //Create my ref to catch my carousel element
   const movieRef = useRef(null);
 

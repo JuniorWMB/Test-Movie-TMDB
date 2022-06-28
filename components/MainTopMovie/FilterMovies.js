@@ -6,15 +6,9 @@ import { ContextStore } from "../../Context/context";
 const FilterMovies = ({ movieGenre }) => {
   const [isShow, setIsShow] = useState(false);
 
-  const {
-    moviesContext,
-    setMoviesContext,
-    setChange,
-    change,
-    setChangeMovie,
-    setIsGenre,
-  } = useContext(ContextStore);
-  // Fonction to retrieve ID Genre and pass to setIsGenreId
+  const { setIsGenre } = useContext(ContextStore);
+
+  // Fonction to retrieve ID Genre and pass to setIsGenreId and toggle isShow state
   const handleGenre = (genreID) => {
     setIsGenre(genreID);
     setIsShow(!isShow);

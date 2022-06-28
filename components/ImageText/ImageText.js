@@ -1,20 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import tmdb from "../../public/tmdb.png";
+import FallBackImage from "../FallBack/FallBackImage";
 
 const ImageText = ({ image, title, year }) => {
   return (
     <div className="poster ">
       <div className="poster-image">
-        <Image
+        <FallBackImage
           src={`https://image.tmdb.org/t/p/w1280${image}`}
-          alt="image"
-          // width="140px"
-          // height="202px"
           priority
           layout="fill"
-          quality={100}
-          className="image-slider"
         />
       </div>
 

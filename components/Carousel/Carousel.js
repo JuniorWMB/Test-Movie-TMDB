@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import ImageText from "../ImageText/ImageText";
 
 const Carousel = ({ movieTopTen, movieRef }) => (
