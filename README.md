@@ -1,6 +1,7 @@
 # 🚀 Movie Finder Test 
 
 ![alt text](/public/moviecapturegithub.png "Optional title")
+![alt text](/public/mobilegithub.png "Optional title")
 
 
 This is a [MovieFinder](https://moviefindertestjunior.netlify.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
