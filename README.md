@@ -2,13 +2,13 @@
 
 This is a [MovieFinder](https://moviefindertestjunior.netlify.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## ⚙️ How to launch th project and test it
-First, clone project:
+## ⚙️ How to launch the project and test it
+First, clone the project:
 ```bash
 git clone  url of project
 ```
 
-Second, run the development server:
+Secondly, run the development server:
 
 ```bash
 npm run dev
@@ -18,7 +18,7 @@ yarn dev
 npm install
 
 ```
-You can Test the code with jest :
+You can test the code using jest :
 
 ```bash
 npm run test
@@ -28,18 +28,18 @@ yarn test
 ```
 ## 💻 Project Description
 
-Movie Finder is app to find top movie and all movie. You can sort by alphabetic or filter by genre and year.
+Movie Finder is an app designed to help users find movies based on different search criteria (alphabetic order or filter by genre or year).
 
-The top movie is carousel slide create from scratch.
-The all movie section, you can only see 20 movies and when you scroll end you see the other 20 movies, i build this from scratch to.
+The top movie carousel has been created from scratch.
+In the "all movie" section, users can see up to 20 movies and scroll to the end to find more movies. I have also built this functionnality from scratch.
 
-Why i used :
+Tech Stack :
 
-- [Next.js](https://nextjs.org/docs) - Because Fast refresh, server-side renderinge, Built-in Image  Component and Automatic Image Optimization, Reusable components.
-- [Jest](https://jestjs.io/fr/) - Because very fast to execute, relatively easy to setup, not requiring any elaborate configuration, 
+- [Next.js](https://nextjs.org/docs) - Used for the speed of the refresh feature, server-side renderinge, Built-in Image  Component and Automatic Image Optimization, Reusable components.
+- [Jest](https://jestjs.io/fr/) - Used for the speed of execution, ease to setup, doesn't require any complex configuration 
 
-Challenge :
+Challenges I faced :
 
-- I build my carousel from scratch, first i use useRef to access to my div carousel and i use scrollLeft and offsetWidth.
-- I create a scroll infinite to my all movie. When my user touch the end to my div, next page is load.
-- Some picture doesnt load so i build a component 'FallBackImage' who replace a image doesnt load with image default.  
+- Building the carousel from scratch: I used useRef to access my div carousel and then scrollLeft and offsetWidth.
+- Create the infinite scroll for all movies: to create a better user experience, at the end to my div, the next page loads automatically.
+- Issues with picture  loading: To solve the problem, I built a component 'FallBackImage' which replaced the image which didn't load with another default image.  
