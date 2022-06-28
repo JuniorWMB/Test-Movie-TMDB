@@ -322,7 +322,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
   .bg-image{
     width: 100%;
     height: 697px;
-    background: url('../public/backgroundimg.jpg');
+    background: url('~/public/backgroundimg.jpg');
     background-color: #2F3D57;
     background-blend-mode: soft-light; 
     filter: saturate(.5) contrast(2.9);
@@ -438,7 +438,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
   }
 
     .inp-icon {
-      background: url(../public/searchicon.svg)no-repeat right;
+      background: url('~/public/searchicon.svg')no-repeat right;
       background-size: 17px 17px;
       padding-left: 25px;
       background-position: 272px center;
