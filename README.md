@@ -2,7 +2,7 @@
 
 This is a [MovieFinder](https://moviefindertestjunior.netlify.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## How to launch th project and test it
+## ⚙️How to launch th project and test it
 First, clone project:
 ```bash
 git clone  url of project
@@ -26,7 +26,7 @@ npm run test
 yarn test
 
 ```
-## Project Description
+## 💻Project Description
 
 Movie Finder is app to find top movie and all movie. You can sort by alphabetic or filter by genre and year.
 
