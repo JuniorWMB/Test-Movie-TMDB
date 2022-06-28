@@ -1,6 +1,6 @@
 import React from "react";
 
-const DropDownGenre = ({ movieGenre }) => {
+const DropDownGenre = ({ movieGenre, handleGenre }) => {
   return (
     <div data-testid="genreMovie" className="genre-filters">
       {movieGenre.map((genre, idx) => {

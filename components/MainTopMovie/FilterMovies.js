@@ -30,7 +30,7 @@ const FilterMovies = ({ movieGenre }) => {
           />
           {isShow && (
             //map to see all genre in dropdown
-            <DropDownGenre movieGenre={movieGenre} />
+            <DropDownGenre movieGenre={movieGenre} handleGenre={handleGenre} />
           )}
         </div>
         <FilterButton textPlaceholder="Année" />
