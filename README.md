@@ -38,3 +38,8 @@ Why i used :
 - [Next.js](https://nextjs.org/docs) - Because Fast refresh, server-side renderinge, Built-in Image  Component and Automatic Image Optimization, Reusable components.
 - [Jest](https://jestjs.io/fr/) - Because very fast to execute, relatively easy to setup, not requiring any elaborate configuration, 
 
+Challenge :
+
+- I build my carousel from scratch, first i use useRef to access to my div carousel and i use scrollLeft and offsetWidth.
+- I create a scroll infinite to my all movie. When my user touch the end to my div, next page is load.
+- Some picture doesnt load so i build a component 'FallBackImage' who replace a image doesnt load with image default.  

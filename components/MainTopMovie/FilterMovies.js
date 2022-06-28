@@ -2,6 +2,7 @@ import React, { useState, useContext } from "react";
 import FilterButton from "../Filter/FilterButton";
 import SortBy from "../Filter/SortBy";
 import { ContextStore } from "../../Context/context";
+import DropDownGenre from "../DropDown/DropDownGenre";
 
 const FilterMovies = ({ movieGenre }) => {
   const [isShow, setIsShow] = useState(false);
@@ -29,15 +30,7 @@ const FilterMovies = ({ movieGenre }) => {
           />
           {isShow && (
             //map to see all genre in dropdown
-            <div data-testid="genreMovie" className="genre-filters">
-              {movieGenre?.map((genre, idx) => {
-                return (
-                  <span onClick={() => handleGenre(genre.id)} key={idx}>
-                    {genre.name}
-                  </span>
-                );
-              })}
-            </div>
+            <DropDownGenre movieGenre={movieGenre} />
           )}
         </div>
         <FilterButton textPlaceholder="Année" />
