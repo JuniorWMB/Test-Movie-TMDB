@@ -1,9 +1,13 @@
+
+
+# Movie Finder Test 
+
 This is a [MovieFinder](https://moviefindertestjunior.netlify.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## How to launch th project and test it
 First, clone project:
 ```bash
-git clone <<URL of project>>
+git clone  url of project
 ```
 
 Second, run the development server:
@@ -23,26 +27,23 @@ yarn test
 ```
 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages. -->
 
-## Learn More
+## Project Description
 
-To learn more about Next.js, take a look at the following resources:
+Movie Finder is app to find top movie and all movie. You can sort by alphabetic or filter by genre and year.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The top movie is carousel slide create from scratch.
+The all movie section, you can only see 20 movies and when you scroll end you see the other 20 movies, i build this from scratch to.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Why i used :
 
-## Deploy on Vercel
+- [Next.js](https://nextjs.org/docs) - Because Fast refresh, server-side renderinge, Built-in Image  Component and Automatic Image Optimization, Reusable components.
+- [Jest](https://jestjs.io/fr/) - Because very fast to execute, relatively easy to setup, not requiring any elaborate configuration, 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Test-Movie-TMDB
