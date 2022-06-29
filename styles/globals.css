@@ -36,7 +36,7 @@ a {
   }
 
   .inp-icon {
-    background: url('~/public/searchicon.svg')no-repeat right;
+    /* background: url('~/public/searchicon.svg')no-repeat right; */
     background-size: 17px 17px;
     padding-left: 25px;
     background-position: 272px center;
@@ -48,11 +48,16 @@ a {
     position: relative;
     z-index: 99;
 }
-::placeholder{
-  color:var(--text-input-color)
-}
 
-
+.search-icon-input{
+  position: relative;
+  top: -30px;
+  right: 85px;
+  z-index: 99;
+  display: flex;
+  justify-content: end;
+  padding: 0 20px;
+ }
 
   .bg-image{
     width: 100%;
@@ -91,21 +96,7 @@ a {
       padding-left:15px ;
 
     }
-    .inp-icon {
-      width: 315px ;
-      height: 40px ;
-      background: url("~/public/searchicon.svg")no-repeat right;
-      background-size: 17px 17px;
-      padding-left: 25px;
-      background-position: 272px center;
-      border: none;
-      background-color: var(--background-color);
-      border-radius: 15px;
-
-      
-    }
-
-
+   
     /* Filter movie*/
     .section-allmovie-search{
       display: flex;
@@ -439,8 +430,24 @@ and (-webkit-min-device-pixel-ratio: 1) {
     padding: 40px 92px;
   }
 
+  .block-input-header{
+    width: 315px;
+      height: 40px;
+      position: relative;
+  }
+
+.search-icon-input{
+  position: relative;
+  top: -30px;
+  z-index: 99;
+  display: flex;
+  justify-content: end;
+  padding: 0 20px;
+ }
+
+
     .inp-icon {
-      background: url('~/public/searchicon.svg')no-repeat right;
+      /* background: url('~/public/searchicon.svg')no-repeat right; */
       background-size: 17px 17px;
       padding-left: 25px;
       background-position: 272px center;
@@ -452,9 +459,9 @@ and (-webkit-min-device-pixel-ratio: 1) {
       position: relative;
       z-index: 99;
   }
-  ::placeholder{
+  /* ::placeholder{
     color:var(--text-input-color)
-  }
+  } */
 
   /*Top Film*/
   .title-block{
