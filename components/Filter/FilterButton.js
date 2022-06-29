@@ -17,7 +17,7 @@ const FilterButton = ({ textPlaceholder, setIsShow, isShow }) => {
       if (changeOrder) {
         setSortByOrder("original_title.asc");
       } else {
-        setSortByOrder("popularity.desc");
+        setSortByOrder("original_title.desc");
       }
     } else {
       console.log("year");
