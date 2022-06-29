@@ -1,6 +1,7 @@
 # 🚀 Movie Finder Test 
 
 ![alt text](/public/moviecapturegithub.png "Optional title")
+![alt text](/public/dropdowngithub.png "Optional title")
 ![alt text](/public/mobilegithub.png "Optional title")
 
 

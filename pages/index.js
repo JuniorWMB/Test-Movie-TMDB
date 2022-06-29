@@ -6,8 +6,10 @@ import Carousel from "../components/MainTopMovie/CarouselImage";
 import FilterMovies from "../components/MainTopMovie/FilterMovies";
 import TitleBlock from "../components/Text/Title";
 import axios from "axios";
+import BgImage from "../public/backgroundimg.jpg";
 
 import { ContextStore } from "../Context/context";
+import Image from "next/image";
 
 export default function Home({ movieTopTen, movieGenre }) {
   const { isGenre, year, sortByOrder, moviesContext, setMoviesContext } =
@@ -16,13 +18,18 @@ export default function Home({ movieTopTen, movieGenre }) {
   const [pagination, setPagination] = useState(1);
 
   useEffect(() => {
-    const handleFetch = async () => {
-      const { data } = await axios.get(
-        `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.NEXT_PUBLIC_API}&language=fr-FR&page=${pagination}&with_genres=${isGenre}&primary_release_year=${year}&sort_by=${sortByOrder}`
-      );
-      setMoviesContext(data);
-    };
-    handleFetch();
+    try {
+      const handleFetch = async () => {
+        // Fetch data from external API
+        const { data } = await axios.get(
+          `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.NEXT_PUBLIC_API}&language=fr-FR&page=${pagination}&with_genres=${isGenre}&primary_release_year=${year}&sort_by=${sortByOrder}`
+        );
+        setMoviesContext(data);
+      };
+      handleFetch();
+    } catch (error) {
+      throw new Error("Failed to fetch");
+    }
   }, [isGenre, sortByOrder, year, pagination]);
 
   return (
@@ -33,7 +40,10 @@ export default function Home({ movieTopTen, movieGenre }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <div className="bg-image" />
+        <div className="bg-image">
+          <div className="bg-color" />
+          <Image src={BgImage} alt="Background Image" layout="fill" priority />
+        </div>
         <Header />
 
         <main className="first-main">

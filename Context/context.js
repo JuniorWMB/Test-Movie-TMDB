@@ -4,11 +4,11 @@ export const ContextStore = createContext();
 
 export const ContextGlobal = ({ children }) => {
   const [isGenre, setIsGenre] = useState(12);
-  const [year, setYear] = useState(2015);
+  const [year, setYear] = useState(2022);
   const [pageMovie, setPageMovie] = useState(1);
   const [change, setChange] = useState(false);
   const [changeMovie, setChangeMovie] = useState(false);
-  const [sortByOrder, setSortByOrder] = useState("popularity.asc");
+  const [sortByOrder, setSortByOrder] = useState("popularity.desc");
   const [moviesContext, setMoviesContext] = useState([]);
   return (
     <ContextStore.Provider

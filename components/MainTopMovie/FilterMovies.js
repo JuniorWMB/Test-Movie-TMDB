@@ -3,15 +3,20 @@ import FilterButton from "../Filter/FilterButton";
 import SortBy from "../Filter/SortBy";
 import { ContextStore } from "../../Context/context";
 import DropDownGenre from "../DropDown/DropDownGenre";
+import CheckOutside from "../CheckOutside/CheckOutside";
 
 const FilterMovies = ({ movieGenre }) => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
 
   const { setIsGenre } = useContext(ContextStore);
 
   // Fonction to retrieve ID Genre and pass to setIsGenreId and toggle isShow state
   const handleGenre = (genreID) => {
     setIsGenre(genreID);
+    setIsShow(!isShow);
+  };
+
+  const handleClick = () => {
     setIsShow(!isShow);
   };
 
@@ -28,9 +33,16 @@ const FilterMovies = ({ movieGenre }) => {
             setIsShow={setIsShow}
             isShow={isShow}
           />
-          {isShow && (
+          {!isShow && (
             //map to see all genre in dropdown
-            <DropDownGenre movieGenre={movieGenre} handleGenre={handleGenre} />
+            <div className="block-dropdown">
+              <CheckOutside onclickOutside={handleClick}>
+                <DropDownGenre
+                  movieGenre={movieGenre}
+                  handleGenre={handleGenre}
+                />
+              </CheckOutside>
+            </div>
           )}
         </div>
         <FilterButton textPlaceholder="Année" />
