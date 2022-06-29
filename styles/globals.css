@@ -36,7 +36,7 @@ a {
   }
 
   .inp-icon {
-    background: url(../public/searchicon.svg)no-repeat right;
+    background: url('~/public/searchicon.svg')no-repeat right;
     background-size: 17px 17px;
     padding-left: 25px;
     background-position: 272px center;
@@ -94,7 +94,7 @@ a {
     .inp-icon {
       width: 315px ;
       height: 40px ;
-      background: url(../public/searchicon.svg)no-repeat right;
+      background: url("~/public/searchicon.svg")no-repeat right;
       background-size: 17px 17px;
       padding-left: 25px;
       background-position: 272px center;
