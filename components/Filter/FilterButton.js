@@ -4,7 +4,7 @@ import dropdownarrow from "../../public/dropdownarrow.svg";
 import { ContextStore } from "../../Context/context";
 
 const FilterButton = ({ textPlaceholder, setIsShow, isShow }) => {
-  const { setSortByOrder, sortByOrder } = useContext(ContextStore);
+  const { setSortByOrder } = useContext(ContextStore);
   const [changeOrder, setChangeOrder] = useState(false);
 
   const handleFilter = () => {
